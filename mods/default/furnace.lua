@@ -31,11 +31,14 @@ function default.get_furnace_active_formspec(fuel_percent, item_percent)
 end
 
 function default.get_furnace_inactive_formspec()
-	return "size[8,8.5]"..
+	return
+	--~ "formspec_version[6]"..
+		"size[8,8.5]"..
 		"list[context;src;2.75,0.5;1,1;]"..
 		"list[context;fuel;2.75,2.5;1,1;]"..
 		"image[2.75,1.5;1,1;default_furnace_fire_bg.png]"..
 		"image[3.75,1.5;1,1;gui_furnace_arrow_bg.png^[transformR270]"..
+		"model[3.75,2.5;1,1;;gui_furnace_arrow.obj;gui_furnace_arrow_bgcol.png]"..
 		"list[context;dst;4.75,0.96;2,2;]"..
 		"list[current_player;main;0,4.25;8,1;]"..
 		"list[current_player;main;0,5.5;8,3;8]"..
